@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/goodsList.css">
+</head>
+
+<body>
+    <div class="header">
+        宋立人仓库管理's goodsList
+    </div>
+    <div class="link">
+        <a href="./index.html">
+            <b>仓库首页</b>
+        </a>
+        <b>>> 站点地图</b>
+    </div>
+    <div class="content" id="goodsList">
+        <div class="goodsList"  >
+            <span>最近文章</span>
+            <ul>
+                <li v-for="goods in goodsList">
+                    <a :href="goods.link" > {{goods.title}}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="tagsList">
+            <span>最近标签</span>
+            <ul>
+                <li v-for="tags in tagsList">
+                    <a href="javascript:void(0)" @click="getGoodsByTagsId(tags.id)">{{tags.tag}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    </div>
+    <div class="footer">
+        <center>
+            <div style="text-algin: center; font-size: 11px">
+                <strong>
+                    <a href="https://www.zh30.com/sitemap.xml" target="_blank">Baidu-SiteMap</a>
+                </strong> &nbsp; Latest Update: 2019-02-13 10:36:25
+                <br>
+                <br>
+            </div>
+        </center>
+        <center>
+            <div style="text-algin: center; font-size: 11px">Powered by
+                <strong>
+                    <a href="/" target="_blank">Baidu SiteMap Generator</a>
+                </strong> &nbsp; © 2018-2019
+                <a href="/" target="_blank" title="柳城">仓库管理系统</a>
+                <br>
+                <br>
+            </div>
+        </center>
+    </div>
+    <script src="https://cdn.bootcss.com/vue/2.6.3/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/axios/0.19.0-beta.1/axios.min.js"></script>
+    <script src="./js/goodsList.js"></script>
+</body>
+
+</html>

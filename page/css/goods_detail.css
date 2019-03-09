@@ -1,0 +1,89 @@
+.goods_detail {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px #1f1f1f;
+    padding: 15px 15px;
+    text-align: left;
+
+}
+.goods_title_now {
+    padding-bottom: 8px;
+    font-weight: 600;
+    font-size: 18px;
+}
+.goods_msg {
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid #a2a2a2;
+}
+.goods_content {
+    font-size: 15px;
+}
+.sendComments {
+    background-color: #f5f5f5;
+    width: 96%;
+    border-radius: 5px;
+    padding: 10px 15px;
+    box-shadow: 3px 4px 3px #888;
+    text-align: left;
+    margin-top: 50px;
+}
+.sendComments input {
+    width: 300px;
+    height: 34px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.sendComments textarea  {
+    width: 90%;
+    height: 100px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+.sendComments button {
+    width: 100px;
+    height: 30px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.sendComments button:hover {
+    background-color: #adadad;
+}
+.content .goods_comments {
+    width:90%;
+    text-align: left;
+    margin-top: 20px;
+}
+.content .goods_comments > ul {
+    background-color: #d9edf7;
+    padding: 15px 13px;
+    margin: 20px 0;
+}
+.content .goods_comments .avatar {
+    display: inline-block;
+    background-image: url("../images/avatar.png");
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 40px;
+    background-size: 100% 100%;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+    margin-bottom: 10px;
+}
+.content > .goods_comments > div > .username {
+    font-size: 14px;
+}

@@ -1,0 +1,43 @@
+.mid_container {
+    width:90%;
+    margin:0 auto;  
+    min-height: 455px;  
+}
+.mid_container .introduce {
+    width: 90%;
+    margin: 15px auto;
+    border-radius: 10px;
+    background: #f5f5f5;
+    border-bottom: 1px solid #eeeccc;
+    padding-bottom: 20px;
+}
+.mid_container .introduce > div {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px 15px;
+    text-align: left;
+}
+.mid_container .content {
+    width:90%;
+    text-align: left;
+}
+.mid_container .content > ul {
+    background-color: #d9edf7;
+    padding: 15px 13px;
+    margin: 20px 0;
+}
+.mid_container .content .avatar {
+    display: inline-block;
+    background-image: url("../images/avatar.png");
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 40px;
+    background-size: 100% 100%;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    vertical-align: middle;
+    margin-bottom: 10px;
+}
+.mid_container > .content > div > .username {
+    font-size: 14px;
+}

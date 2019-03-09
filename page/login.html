@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input {
+            padding: 4px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="login">
+        <input type="text" placeholder="请输入用户名" class="username">
+        <input type="password" placeholder="请输入密码" class="password">
+        <button @click="login()">登录</button>
+        <a href="./resign.html">还没有账号？</a>
+    </div>
+    <script src="https://cdn.bootcss.com/vue/2.6.3/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/axios/0.19.0-beta.1/axios.min.js"></script>
+    <script src="./js/login.js"></script>
+
+</body>
+</html>

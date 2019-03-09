@@ -1,0 +1,128 @@
+.daily {
+    box-sizing: border-box;
+    background: #f5f5f5;
+    width: 100%;
+    text-align: left;
+    border-radius: 5px;
+    box-shadow: 3px 4px 3px #888;
+    padding: 10px 15px;
+    font-size: 12px;
+}
+
+.goodsList {
+    display: inline-block;
+    width: 100%;  
+    margin-top: 20px;
+    
+}
+.goods {
+    background: white;
+    border-radius: 5px;
+    box-shadow: 1px 2px 2px #888;
+    margin-top: 20px;
+    text-align: left
+}
+.goods_title {
+    padding-bottom: 10px; 
+    display: inline-block;
+    font-size: 20px;
+    padding: 5px 10px;
+    
+    color: #13102b;
+}
+.goods_title:hover{
+    color: #337ab8;
+}
+.goods_content {
+    font-size: 14px;
+    color: #13102b;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
+    padding: 5px 10px;
+    
+}
+.goods_foot {
+    box-sizing: border-box;
+    color: #eee;
+    background: #1f1f1f;
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+.right_module {
+    display: inline-block;
+    width: 100%;
+    background: #1f1f1f;
+    color: white;
+    border-radius: 10px;
+    text-align: left;
+    padding: 0px 15px 25px 15px;
+    margin-bottom: 20px;
+    word-wrap:break-word;
+    word-break:break-all;
+    box-sizing: border-box
+}
+.right_module > div {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    padding: 15px 5px 15px 0;
+    color: dodgerblue;
+}
+.right_module > a{
+    display: inline-block;
+    font-size: 14px;
+    color: dodgerblue;
+}
+.right_module > ul > li {
+    color: white;
+    padding: 8px 0px;
+}
+.right_module > ul > li > a {
+    font-size: 14px;
+    color: white
+}
+.right_module > div > ul > li {
+    padding: 10px 0;
+    border-bottom: 1px solid #777
+}
+.right_module > div > ul > li > div {
+    display: flex;
+    justify-content: space-between;
+    color: #eee;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.right_module > div > ul > li > p {
+    font-size: 14px;
+    color: #777;
+    cursor: pointer;
+}
+.right_module > div > ul > li > p:hover {
+    color: #337ab8
+}
+footer {
+    width: 100%;
+    height: 60px;
+    background: #191818;
+    text-align: center;
+    padding: 20px;
+}
+footer > ul {
+    display: inline-block;
+    margin: 0px auto;
+    text-align: center;
+}
+footer > ul > li {
+    display: inline-block;
+    color: #a2a2a2;
+    float: left;
+    font-size: 14px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+footer > p {
+    color: #777;
+}

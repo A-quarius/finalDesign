@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/goods_detail.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="#" class="title">我的仓库管理系统</a>
+            <ul class="menu">
+                <li><a href="./index.html">首页</a></li>
+                <li><a href="./goodsList.html">地图</a></li>
+                <li><a href="./about.html">关于</a></li>
+                <li><a href="./addGoods.html">留言</a></li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="请输入货物名称">
+                <button>搜索</button>
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        <div class="content_left">
+            <div class="goods_detail" id="goods_detail">
+                <div class="goods_title_now">{{title}}</div>
+                <div class="goods_msg">作者：Song liren 标签：{{tags}} 发布于{{ctime}} 浏览({{views}})</div>
+                <div class="goods_content" v-html="content"></div>
+            </div>
+            <div class="goods_comments" id="goods_comments">
+                <p>留言：共111条</p>
+                <ul  v-for="item in goods_comments_id" style="margin-bottom: 10px;">
+                    <li>
+                        <div>
+                            <span class="avatar"></span>
+                            <span class="username">{{item.username}}:</span>
+                            <span>发表于{{item.citme}}</span>
+                            <p>{{item.comments}}</p>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="sendComments" id="sendComments">
+                <span>发表评论</span>
+                <div>
+                    <input type="hidden" id="reply" value="-1">
+                    <input type="text" placeholder="请输入昵称" id="comments_name" >
+                    <input type="text" placeholder="请输入邮箱，评论被回复是，你会收到通知" id="comments_email" >
+                </div>
+                <div>
+                    <textarea placeholder="无意义的内容，我不会回复你" id="comments_content"></textarea>
+                </div>
+                <div>
+                    <input type="text" placeholder="验证码" id="comments_code" >
+                    <span v-html="randomCode.data" @click="changeCode"></span>
+                </div>
+                <button @click="sendComments()">提交评论</button>
+            </div>
+        </div>
+        <div class="content_right">
+            <div class="right_module">
+                <div class="random" id="randomTags">
+                    <div>随机标签云</div>
+                    <a href="/" v-for="item in tags" :style="{color: randomColor(),fontSize: randomSize()}" @click="getGoodsByTagsId(item.id)">{{item.tag}}</a>
+                </div>
+            </div>
+            <div class="right_module" id="newHot">
+                <div>最近热门</div>
+                <ul>
+                    <li v-for="item in titleList"><a :href="item.link">{{item.title}}</a></li>
+                </ul>
+            </div>
+            <div class="right_module" id="newComment">
+                <div class="random">
+                    <div>热门评论</div>
+                    <ul>
+                        <li v-for="item in commentList">
+                            <div>
+                                <span>{{item.name}}</span>
+                                <span>{{item.date}}</span>
+                            </div>
+                            <p><a :href="item.link">{{item.comment}}</a></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <ul>
+            <li>C/C++</li>
+            <li>CSS/DIV</li>
+            <li>java</li>
+            <li>javacript</li>
+            <li>Linux</li>
+            <li>Mac</li>
+            <li>PC技术</li>
+            <li>PHP</li>
+            <li>Python</li>
+            <li>ubuntu</li>
+            <li>关于seo</li>
+            <li>分享经验</li>
+            <li>听听音乐</li>
+            <li>幽默搞笑</li>
+            <li>建站经验</li>
+            <li>新闻资讯</li>
+            <li>模拟飞行</li>
+            <li>片言碎语</li>
+            <li>婉转手机</li>
+            <li>编程基础</li>
+            <li>视频分享</li>
+        </ul>
+        <p>Copyright © 2010-2017 宋立人仓库管理系统 All rights reserved.  鲁ICP备14017955号站长统计</p>
+    </footer>
+    <script src="https://cdn.bootcss.com/vue/2.6.3/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/axios/0.19.0-beta.1/axios.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/base.js"></script>
+    <script src="./js/goods_detail.js"></script>
+</body>
+</html>

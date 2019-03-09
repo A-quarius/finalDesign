@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>仓库管理系统</title>
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/index.css"> 
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="#" class="title">我的仓库管理系统</a>
+            <ul class="menu">
+                <li><a href="./index.html">首页</a></li>
+                <li><a href="./goodsList.html">地图</a></li>
+                <li><a href="./about.html">关于</a></li>
+                <li><a href="./addGoods.html" v-if="login">编写文章</a></li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="请输入货物名称">
+                <button>搜索</button>
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        <div class="content_left">
+            <div class="daily" id="daily"> 
+                <span>每日一句</span>
+                <p>{{getContent}}</p>
+                <p>----------宋立人</p>
+            </div>
+            <div class="goodsList"  id="goodsList">
+                <div class="goods" v-for="item in goodsList">
+                    <a :href="item.link" class="goods_title">
+                        {{item.title}}
+                    </a>
+                    <p class="goods_content">
+                        {{item.content}}
+                    </p>
+                    <div class="goods_foot">
+                        发布于：{{item.ctime}} |  浏览({{item.views}}) | Tags：{{item.tags}}
+                    </div>
+                </div>
+                <div class="page_tool">
+                    <ul>
+                        <li v-for="item in pageNumList" @click="jumpPage(item.page)" :class="{now_page:(item.text == page)}">{{item.text}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="content_right">
+            <div class="right_module">
+                <div class="random" id="randomTags">
+                    <div>随机标签云</div>
+                    <a href="javascript:void(0)" v-for="item in tags" @click="getGoodsByTagsId(item.id)" :style="{color: randomColor(),fontSize: randomSize()}">{{item.tag}}</a>
+                </div>
+            </div>
+            <div class="right_module" id="newHot">
+                <div>最近热门</div>
+                <ul>
+                    <li v-for="item in titleList"><a :href="item.link">{{item.title}}</a></li>
+                </ul>
+            </div>
+            <div class="right_module" id="newComment">
+                <div class="random">
+                    <div>热门评论</div>
+                    <ul>
+                        <li v-for="item in commentList">
+                            <div>
+                                <span>{{item.name}}</span>
+                                <span>{{item.date}}</span>
+                            </div>
+                            <p>{{item.comment}}</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <ul>
+            <li>C/C++</li>
+            <li>CSS/DIV</li>
+            <li>java</li>
+            <li>javacript</li>
+            <li>Linux</li>
+            <li>Mac</li>
+            <li>PC技术</li>
+            <li>PHP</li>
+            <li>Python</li>
+            <li>ubuntu</li>
+            <li>关于seo</li>
+            <li>分享经验</li>
+            <li>听听音乐</li>
+            <li>幽默搞笑</li>
+            <li>建站经验</li>
+            <li>新闻资讯</li>
+            <li>模拟飞行</li>
+            <li>片言碎语</li>
+            <li>婉转手机</li>
+            <li>编程基础</li>
+            <li>视频分享</li>        
+        </ul>
+        <p>Copyright © 2010-2017 宋立人仓库管理系统 All rights reserved.  鲁ICP备14017955号站长统计</p>
+    </footer>
+    <script src="https://cdn.bootcss.com/vue/2.6.3/vue.min.js"></script>       
+    <script src="https://cdn.bootcss.com/axios/0.19.0-beta.1/axios.min.js"></script>    
+    <script src="./js/index.js"></script>
+    <script src="./js/base.js"></script>    
+</body>
+</html>
